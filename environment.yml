@@ -1,0 +1,14 @@
+name: projectx
+channels:
+  - defaults
+# conda dependencies
+# e.g. $ conda install <package>
+dependencies:
+  - black
+  - jupyter
+  - pip
+  - python=3.7
+# pip dependencies
+# e.g. $ pip install <package>
+# check first if it can be installed with conda before putting it here
+  - pip:
