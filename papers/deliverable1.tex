@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+
+% PACKAGES
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{authblk}
+\usepackage[backend=biber]{biblatex}
+
+% PAGE DIMENSIONS
+\geometry{a4paper}
+
+% BIBLIOGRAPHY FILE
+\addbibresource{deliverable1.bib}
+
+% TITLE
+\title{ProjectX Research Proposal}
+\author{Will Fenton}
+\author{Zubier Hagi}
+\author{Nick Nissen}
+\author{Paul Saunders}
+\author{Giancarlo Pernudi Segura}
+\author{Justin Stevens}
+\affil{University of Alberta}
+
+\begin{document}
+\maketitle
+
+\section{Proposal}
+
+Climate change is a medical emergency that creates uncertainty for all social and environmental determinants which can have a negative impact on our societal health. Due to the ever-changing dynamics of climate change, this creates an increased risk for human exposure through vector-borne disease (VBD) via pathogens, host, and transmission. Since this will cause implications to a human's health or multiply existing health conditions, this research will allow us to examine scientific evidence and documents on the impact climate change has on human infectious disease. 
+
+Ectotherms such as mosquitoes rely on external sources of heat, which means that the impacts of climate variability would have an important role in influencing the developmental process and behaviors of mosquitoes. Temperature variations make ectotherms very sensitive to the features of the abiotic environment, which can allow mosquitoes to transmit several viruses that can cause diseases such as west nile virus, malaria, dengue fever, yellow fever, chikungunya, and Zika virus infection. Recent studies have shown that urban areas are particularly vulnerable due to the features of the environment which provides mosquitoes the ideal conditions to proliferate and have greater contact with humans. However, comparing the data of some of the urban and suburban cities have resulted in different mosquitoes densities and human disease incidences.
+
+ According to Dr. Barbara Han, this could be caused by climate and weather variables or how different features of the urban/suburban environment have been developed. Therefore, is there a way we can adapt our cities or vulnerable areas to reduce the number of vector-borne diseases transmitted from mosquitoes while monotonically reducing the mosquito population?
+
+Thus far, the insight from Dr. Barbara Han and Dr. Stephanie Yanow has helped us understand that there is a significant amount of research surrounding the use of machine learning to track mosquitoes, however there is a lack of research specifically targeted at using these results to combat climate change. By combining these existing data with climate and weather variables, this will help us distinguish emerging patterns between different environmental areas. Cities are rife with ideal '‘micro-habitats’' for mosquitoes, such as garbage piles or discarded tires. Urban features are more likely to allow mosquitoes to breed quite well, specifically in underdeveloped countries or regions. These urban areas tend to have runoff from landfills and crumbling infrastructure which proves to be an excellent breeding ground for the insect. Furthermore, mosquito populations are not directly correlated with temperature as mosquitoes have a thermal optimum. Beyond this optimum, a given region will no longer be viable, and their populations will taper off. Therefore, once a region on Earth has surpassed this optimum the main factors contributing to mosquito population growth are landscape, predators, and prominent breeding grounds. Our research focuses on landscape and breeding grounds.
+
+As climate change progresses and ocean levels rise, people will be pushed farther away from oceanfront towns and into mainland villages and cities. These cities will need to expand in order to keep up with the onslaught of climate refugees. Our aim is to provide valuable research into determining mosquito trends based on the level of industrialization in an urban environment so as to identify the characteristics which prevent rapid mosquito population growth. Hopefully, these characteristics will enable city developers and planners to better prepare and defend against possible breeding grounds for mosquitoes. In the era of climate change, this research may prove vital to reducing the likelihood of outbreaks of numerous vector-borne infectious diseases.
+
+\section{Research}
+\subsection{Contribution}
+The bulk of our research contribution will consist of analyzing the output of our model, through which we run the satellite images and mosquito trap data. Our hope is that analysis of the model’s insights will help determine the underlying factors which cause mosquito populations in urban areas to increase. As a direct result of our research, municipalities can more effectively implement strategies to curtail increased mosquito populations. Moreover, these same municipalities will be better equipped to handle an increase in population or traffic as a result of human displacement caused by climate change.
+
+\subsection{Related Research}
+Similar research does exist in the field. Although the methodology of these papers are similar, they have some significant differences from our methods. Many papers utilize convolutional neural networks to analyze landscape data and draw conclusions about mosquito populations. These papers are usually localized to one geographical area, cover a relatively small timeline, or both. We intend to improve in both of these areas in order to build a better profile of how mosquito populations in urban areas may be affected by climate change.
+
+For instance, \parencite{deeplandscape} covers data from the years 2012-2016 in Pakistan. Furthermore, \parencite{ModelingDV} utilizes machine learning technique to predict the oviposition of certain mosquitoes in North Argentina.  The paper \parencite{doublepunch} discusses the risk that dengue fever and COVID-19 play together in Asian countries, specifically since treatments used to treat dengue fever might have adverse affects on COVID treatment. 
+
+For some other techniques, the paper \parencite{dengue} attempts to use passenger flow to see how easily diseases such as dengue can spread based on airport data. Furthermore, \parencite{twitter} is a slightly older paper that used Twitter data to predict when certain epidemics relating to Dengue and Zika will occur in Brazil. 
+
+For some possible treatments and for how to better contain outbreaks related to vector-borne diseases, \parencite{agent} uses satellite imagery to detect several abiotic factors that are important to the mosquito life cycle, and then uses agent-based modeling to predict what control strategies might be useful. 
+
+\subsection{Machine Learning}
+There have been a number of studies using machine learning to identify trends in mosquito populations. Our approach will use a combination of convolutional neural networks to measure the level of industrialization present in a given satellite image, along with historical data from mosquito traps around the world. We will use this data to build a predictive model where we can identify the characteristics that lead to increased mosquito populations in urban environments, and extrapolate this data to the outcomes which may arise in areas hit hard by climate change.
+
+
+\subsection{Dataset}
+Our datasets will consist of a variety of mosquito trap datasets. Since there are no centralized sources for this type of data, we will be extracting data from a variety of different sources. We anticipate that the data will be typically from different municipalities as these are usually the groups that perform the mosquito trap data collection. Some of the datasets we intend to use in our research are the following.
+
+\begin{itemize}
+	\item https://www.tycho.pitt.edu/
+	Global disease incidence data spanning more than a century of diseases. Specific timeframe recorded depends on the disease measured. This will be useful for tracking vector-borne diseases over different timeframes.
+	
+	\item https://malariaatlas.org/
+	Worldwide malaria incidence data mainly focused on sub-Saharan Africa. Data spans from 1980 - 2020. Data which is specifically targeted towards one disease may prove more beneficial than a larger dataset with many diseases. Our hope is that we can get more insights out of this dataset.
+	\item https://www.neonscience.org/data-collection/mosquitoes
+	Nationwide mosquito trap data from the United States of America. Data spans 2014 - 2020. Using this dataset in conjunction with the above disease datasets and other geographic information will likely prove useful in determining the factors which contribute to different levels of mosquito populations.
+\end{itemize}
+
+\section{Planning}
+We plan to fine-tune our problem over the rest of September to land on a concrete novel problem, as there is a potential to combine data of these environments from aerial photos with respect to data of the human disease incidences of these regions. Furthermore, we must also be able to denote the emergent patterns of this data with the variables of climate and weather change. Once we are able to understand these correlations we will then be able to construct a model that will predict disease incidence using climate variables about the environment such as population density, city infrastructure and various other data of cities.
+
+
+\section{Expert Feedback}
+We reached out to Dr. Barbara Han, Disease Ecologist, Dr. Stephanie Yanow, \& Dr. Shelby Yamamoto.
+
+\subsection{What we learned}
+\begin{itemize}
+\item There is significant research surrounding the use of machine learning to track mosquitoes, however, there is a lack of research specifically targeted at using results to combat climate change.
+\item Cities have a number of ‘microhabitats’ for mosquitoes, such as garbage piles or discarded tires. 
+\item These suburban features are more common in lower-income neighbourhoods.
+\item There exists the potential to combine data about these built environments from aerial photos of various cities with data on human disease incidence and climate/weather variables to look for emergent patterns.
+\item Mosquitoes have a thermal optimum, and in temperatures much beyond this optimum the populations will no longer be viable, barring any evolution of the mosquitoes themselves.
+\end{itemize}
+
+\section{Works Cited}
+\subsection{What do we know?}
+Mosquitoes are very sensitive to features of the abiotic environment such as temperature, rainfall, humidity (all impacted by climate change). Mosquitoes respond very differently to structures in the built environment.
+\begin{itemize}
+\item For example, in an urban area with lots of garbage, discarded tires, crumbling infrastructure, we see lots of small microhabitats where mosquitoes breed quite well. 
+\item Compared to urban areas that are more well off, or compared to suburban areas with less garbage and well tended properties, mosquito population densities (and therefore disease risk) is much higher in lower income neighborhoods. 
+\end{itemize}
+\subsection{What do we hope to answer?}
+\begin{itemize}
+\item Do cities with certain features tend to have more mosquito borne disease?
+\item How do these cities compare to others from the same region that seem to have lower disease burdens?
+\item Could there be some recommendations that emerge about how we address this - for instance, can we build our cities in such a way that we naturally reduce the number of vector borne disease?
+\end{itemize}
+\subsection{What is our model?}
+We think there is potential to combine data about these built environments from aerial photos of various cities with data on human disease incidence and climate and weather variables to look for emergent patterns.
+
+\subsection{What other questions did we consider?}
+We brainstormed a few other ideas before choosing this one. One of the other ideas we were considering was detecting fake news on Twitter related to COVID-19, but we couldn't justify how this was related to climate change. A second idea we considered was seeing how travel data has impacted the spread of viruses, and in particular comparing the 1918 Spanish flu to the present COVID-19 outbreak. 
+
+\printbibliography
+\end{document}
