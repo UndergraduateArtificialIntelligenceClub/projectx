@@ -17,12 +17,14 @@ jobs:
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v2
         with:
+          working_directory:
+            papers
           root_file: |
-            papers/deliverable1.tex
-            papers/deliverable1-temp.tex
+            deliverable1.tex
+            deliverable1-temp.tex
 
       - name: Upload output PDFs as artifacts
         uses: actions/upload-artifact@v2
         with:
           name: papers
-          path: ./*.pdf
+          path: papers/*.pdf
