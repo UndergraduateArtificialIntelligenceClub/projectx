@@ -32,6 +32,6 @@ $ black .
 Don't push directly to master, instead work on a separate branch and when it's ready you can open a pull request. If the changes are non-trivial somebody should review and approve the pull request before you merge it.
 
 ## Project Structure
-Code goes in `/src`, notebooks in `/notebooks`, data in `/data`, models in `/models`. 
+Code goes in `/src`, notebooks in `/notebooks`, data in `/data`, models in `/models`, LaTeX / paper stuff in `/papers`. 
 
 Try to structure things logically within each directory.
