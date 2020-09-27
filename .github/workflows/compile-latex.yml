@@ -1,14 +1,14 @@
-name: Build LaTeX Documents
+name: Compile LaTeX Documents
 
 on:
   push:
     paths:
     - '**.tex'
     - '**.bib'
-    - '.github/workflows/build-latex.yml'
+    - '.github/workflows/compile-latex.yml'
 
 jobs:
-  build:
+  compile-latex:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,11 +17,13 @@ jobs:
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v2
         with:
+          working_directory: |
+            papers
           root_file: |
             papers/deliverable1.tex
             papers/deliverable1-temp.tex
 
-      - name: Save outputs as artifacts
+      - name: Save output PDFs as artifacts
         uses: actions/upload-artifact@v2
         with:
           name: papers
