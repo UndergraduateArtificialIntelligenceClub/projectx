@@ -1,0 +1,31 @@
+name: Setup Anaconda environment
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/conda-env.yml'
+      - 'environment.yml'
+
+jobs:
+  example-1:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: ['ubuntu-latest', 'windows-latest']
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+          activate-environment: projectx
+          environment-file: environment.yml
+          auto-activate-base: false
+      - name: Test conda
+        shell: bash -l {0}
+        run: |
+          conda info
+          conda list
