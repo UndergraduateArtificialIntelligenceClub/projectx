@@ -4,7 +4,9 @@ on:
   push:
     - paths:
     - 'papers/src/*'
-    - 'environment.yml'
+  pull_request:
+    - paths:
+    - 'papers/src/*'
 
 jobs:
   build:
