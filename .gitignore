@@ -1,3 +1,23 @@
+# LaTeX stuff
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.pdf
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
 # Intellij config folder
 .idea
 

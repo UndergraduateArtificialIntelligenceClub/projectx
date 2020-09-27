@@ -1,0 +1,26 @@
+name: Build LaTeX Documents
+
+on:
+  push:
+    - paths:
+    - 'papers/src/*'
+    - 'environment.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Compile Deliverable 1
+        uses: julianahrens/latex-biber-action@v2
+        with:
+          filename: 'papers/src/deliverable1.tex'
+          output-directory: 'deliverable1'
+
+      - name: Save outputs as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: deliverable1
+          path: deliverable1
