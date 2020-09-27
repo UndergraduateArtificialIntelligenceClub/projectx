@@ -2,11 +2,15 @@ name: Build LaTeX Documents
 
 on:
   push:
-    - paths:
-    - 'papers/src/*'
+    paths:
+    - '**.tex'
+    - '**.bib'
+    - '.github/workflows/build-latex.yml'
   pull_request:
-    - paths:
-    - 'papers/src/*'
+    paths:
+    - '**.tex'
+    - '**.bib'
+    - '.github/workflows/build-latex.yml'
 
 jobs:
   build:
