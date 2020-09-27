@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v2
@@ -21,7 +22,6 @@ jobs:
             papers
           root_file: |
             deliverable1.tex
-            deliverable1-temp.tex
 
       - name: Upload output PDFs as artifacts
         uses: actions/upload-artifact@v2
