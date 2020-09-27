@@ -6,11 +6,6 @@ on:
     - '**.tex'
     - '**.bib'
     - '.github/workflows/build-latex.yml'
-  pull_request:
-    paths:
-    - '**.tex'
-    - '**.bib'
-    - '.github/workflows/build-latex.yml'
 
 jobs:
   build:
@@ -23,10 +18,11 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            deliverable1.tex
+            papers/deliverable1.tex
+            papers/deliverable1-temp.tex
 
       - name: Save outputs as artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: PDFs
-          path: ./*.pdf
+          name: papers
+          path: papers/*.pdf
