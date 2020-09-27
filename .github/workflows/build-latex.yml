@@ -25,17 +25,6 @@ jobs:
           root_file: |
             deliverable1.tex
 
-      - name: Download and run biber
-        run: |
-          sudo apt install biber -y
-          biber deliverable1
-
-      - name: Compile LaTeX documents w/ bib references
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: |
-            deliverable1.tex
-
       - name: Save outputs as artifacts
         uses: actions/upload-artifact@v2
         with:
