@@ -19,14 +19,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Compile Deliverable 1
-        uses: julianahrens/latex-biber-action@v2
+      - name: Compile LaTeX documents
+        uses: xu-cheng/latex-action@v2
         with:
-          filename: 'papers/src/deliverable1.tex'
-          output-directory: 'deliverable1'
+          root_file: |
+            deliverable1.tex
+
+      - name: Download and run biber
+        run: |
+          sudo apt install biber -y
+          biber deliverable1
+
+      - name: Compile LaTeX documents w/ bib references
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            deliverable1.tex
 
       - name: Save outputs as artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: deliverable1
-          path: deliverable1
+          name: PDFs
+          path: ./*.pdf
