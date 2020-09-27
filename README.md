@@ -22,7 +22,7 @@ $ conda env update --name projectx -f environment.yml
 If you need a python package that isn't in the `environment.yml` file, add it there and update the environment.
 
 ## Code Style
-Before you push any Python code, format it using `black`. You can't merge code until it's formatted.
+Before you push any Python code, format it using `black`. If you make a pull request with unformatted code a check will fail on the PR.
 
 ```shell script
 $ black .
