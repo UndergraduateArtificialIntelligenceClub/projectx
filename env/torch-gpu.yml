@@ -1,0 +1,15 @@
+# PyTorch GPU packages
+# requires CUDA Toolkit 10.2 to be installed on the system
+#
+# verify that it works by running the following:
+#
+# import torch
+# torch.cuda.is_available()
+name: null
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - pytorch
+  - torchvision
+  - cudatoolkit=10.2
