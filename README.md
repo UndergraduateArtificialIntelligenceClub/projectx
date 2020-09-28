@@ -24,13 +24,13 @@ $ conda env remove -n projectx
 
 If you need a python package that isn't in the `base.yml` file, add it there and update the environment.
 
-#### CPU / GPU specific libraries
+### CPU / GPU specific libraries
 
 Some libraries (mainly deep learning libraries like PyTorch and Tensorflow) must be installed differently if you have a CUDA-capable GPU, these should be installed separately from the `base.yml` file.
 
-```shell script
-#--- PyTorch Installation ---#
+#### PyTorch Installation
 
+```shell script
 # CPU only
 $ conda env update -n projectx -f env/torch-cpu.yml
 
