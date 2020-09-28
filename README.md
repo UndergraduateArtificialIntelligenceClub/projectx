@@ -17,6 +17,9 @@ $ conda deactivate
 
 # update the conda environment
 $ conda env update --name projectx -f environment.yml
+
+# remove the conda environment
+$ conda env remove --name projectx
 ```
 
 If you need a python package that isn't in the `environment.yml` file, add it there and update the environment.
