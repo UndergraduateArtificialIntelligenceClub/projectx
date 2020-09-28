@@ -4,7 +4,7 @@ on:
   pull_request:
     paths:
       - '.github/workflows/conda-env.yml'
-      - 'environment.yml'
+      - 'env/base.yml'
 
 jobs:
   setup-conda-env:
@@ -27,7 +27,7 @@ jobs:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
           activate-environment: projectx
-          environment-file: environment.yml
+          environment-file: env/base.yml
           auto-activate-base: false
 
       - name: Test conda

@@ -1,4 +1,6 @@
-name: projectx
+# this is the base environment file
+# packages here shouldn't require GPU
+name: null
 channels:
   - defaults
 # conda dependencies
