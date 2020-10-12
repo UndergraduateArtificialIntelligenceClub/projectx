@@ -38,6 +38,11 @@ $ conda env update -n projectx -f env/torch-cpu.yml
 $ conda env update -n projectx -f env/torch-gpu.yml
 ```
 
+### Google Earth Engine Authentication
+
+In order to use the Earth Engine API you first need to authenticate with the `earthengine` CLI. Make sure you're in the `projectx` conda environment and run `earthengine authenticate`. Follow the steps there (using the UAIS google account). It will save an auth token to your machine letting you use the API.
+
+
 ## Code Style
 Before you push any Python code, format it using `black`. If you make a pull request with unformatted code a check will fail on the PR.
 
