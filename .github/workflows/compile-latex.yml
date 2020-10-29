@@ -22,6 +22,7 @@ jobs:
             papers
           root_file: |
             deliverable1.tex
+            deliverable2.tex
 
       - name: Upload output PDFs as artifacts
         uses: actions/upload-artifact@v2
